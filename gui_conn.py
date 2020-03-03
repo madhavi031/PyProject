@@ -4,7 +4,7 @@ import pymysql.cursors
 import datetime as dt
 
 root=Tk()
-root.geometry('500x500')
+root.geometry('660x6500')
 root.title("Registration form")
 
 Fullname=StringVar()
@@ -34,22 +34,22 @@ Label_0 = Label(root,text="Registration form for Course",width=30,font=("bold",2
 Label_0.place(x=90,y=53)
 
 Label_1=Label(root,text="Full Name",width=20,font=("bold",10))
-Label_1.place(x=80,y=130)
+Label_1.place(x=90,y=130)
 
 entry_1=Entry(root,textvar=Fullname)
-entry_1.place(x=240,y=130)
+entry_1.place(x=250,y=130)
 
 Label_2=Label(root,text="Email",width=20,font=("bold",10))
 Label_2.place(x=68,y=180)
 
 entry_2=Entry(root,textvar=Email)
-entry_2.place(x=240,y=180)
+entry_2.place(x=250,y=180)
 
 label_3 = Label(root, text="Gender",width=20,font=("bold", 10))
 label_3.place(x=70,y=230)
 
-Radiobutton(root, text="Male",padx = 5, variable=g, value=1).place(x=235,y=230)
-Radiobutton(root, text="Female",padx = 20, variable=g, value=2).place(x=290,y=230)
+Radiobutton(root, text="Male",padx = 5, variable=g, value=1).place(x=225,y=240)
+Radiobutton(root, text="Female",padx = 20, variable=g, value=2).place(x=280,y=240)
 
 label_4 = Label(root, text="Course",width=20,font=("bold", 10))
 label_4.place(x=70,y=280)
@@ -63,11 +63,13 @@ droplist.config(width=15)
 c.set('select your course') 
 droplist.place(x=240,y=280)
 
+#for showing date on the form
 date = dt.datetime.now()
 
 w = Label(root, text=f"{dt.datetime.now():%a, %b %d %Y}", fg="white", bg="black", font=("helvetica", 13)).place(x=400,y=230)
 
-#following is also a Working Code using ComboBox instrad of droplist widget
+#following is also a working code using ComboBox instead of droplist widget
+
 #label4 = Label(root,text = "Choose your favourite course")
 #label4.place(x=70,y=280)
 
