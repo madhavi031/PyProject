@@ -11,7 +11,7 @@ Fullname=StringVar()
 Email=StringVar()
 g=IntVar()
 c=StringVar()
-#var1= IntVar()
+
 
 def database():
     db=pymysql.connect("localhost","root","root","test")
@@ -67,6 +67,7 @@ date = dt.datetime.now()
 
 w = Label(root, text=f"{dt.datetime.now():%a, %b %d %Y}", fg="white", bg="black", font=("helvetica", 13)).place(x=400,y=230)
 
+#following is also a Working Code using ComboBox instrad of droplist widget
 #label4 = Label(root,text = "Choose your favourite course")
 #label4.place(x=70,y=280)
 
